@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cba992e-adab-4043-b45a-fadb4f13f727" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BileMo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BileMo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +121,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\BileMo" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -147,5 +146,9 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="670" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1920.1040/1920.3.1536.824@0.40.1920.1040" timestamp="1608756059560" />
+    <state x="667" y="293" width="585" height="534" key="find.popup" timestamp="1608762085482">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="667" y="293" width="585" height="534" key="find.popup/0.40.1920.1040/1920.3.1536.824@0.40.1920.1040" timestamp="1608762085482" />
   </component>
 </project>

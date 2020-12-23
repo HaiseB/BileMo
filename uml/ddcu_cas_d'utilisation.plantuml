@@ -1,0 +1,35 @@
+@startuml cas_d'utilisation
+scale 1
+Left to right direction
+skinparam packageStyle rect
+actor Customers
+
+rectangle cas_d'utilisation {
+    (Customers) --- (s'authentifier)
+    (Customers) -- (creer un compte)
+
+    package Users {
+        (Customers) -- (voir la liste de ses utilisateurs)
+        (Customers) -- (voir les details d'un de ses utilisateur)
+        (Customers) -- (creer un utilisateur)
+        (Customers) -- (supprimer un utilisateur)
+    }
+
+    package Products {
+        (Customers) -- (voir la liste des produits)
+        (Customers) -- (voir les détails d'un produit)
+    }
+
+    Users .> (s'authentifier):include
+    Products .> (s'authentifier):include
+
+    (creer un compte) .> (s'authentifier):extend
+
+    (voir les details d'un de ses utilisateur) ..> (voir la liste de ses utilisateurs):extend
+
+    (creer un utilisateur) .> (voir les details d'un de ses utilisateur):extend
+    (supprimer un utilisateur) .> (voir les details d'un de ses utilisateur):extend
+
+}
+
+@enduml

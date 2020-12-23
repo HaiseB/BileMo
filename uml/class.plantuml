@@ -1,0 +1,69 @@
+@startuml class
+
+package Entity <<Database>> {
+    class Customers {
+        {static} Auto_increment id
+        --
+        {static} String name
+        {static} String email
+        {static} String picturePath
+        {static} String password
+        {static} Boolean token
+        {static} Boolean is_registered
+        {static} Datetime created_at
+        {static} Datetime updated_at
+    }
+
+    Users "0..*" -- "1" Customers
+
+    class Users {
+        {static} Auto_increment id
+        --
+        {static} String name
+        {static} String phone_number
+        {static} String email
+        {static} Datetime created_at
+        {static} Datetime updated_at
+    }
+
+    class Products {
+        {static} Auto_increment id
+        --
+        {static} String name
+        {static} String reference
+        {static} String picturePath
+        {static} Float price
+        {static} Float display
+        {static} Float height
+        {static} Float width
+        {static} Float depth
+        {static} String camera
+        {static} Textarea description
+        {static} Datetime launched_at
+        {static} Datetime created_at
+        {static} Datetime updated_at
+    }
+
+    Products "1..*" -- "0..*" Colors
+
+    class Colors {
+        {static} Auto_increment id
+        --
+        {static} String name
+        {static} Datetime created_at
+        {static} Datetime updated_at
+    }
+
+    Products "1..*" -- "0..*" Capacitys
+
+    class Capacitys {
+        {static} Auto_increment id
+        --
+        {static} int value
+        {static} String unit
+        {static} Datetime created_at
+        {static} Datetime updated_at
+    }
+}
+
+@enduml
