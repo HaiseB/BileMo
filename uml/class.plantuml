@@ -8,8 +8,7 @@ package Entity <<Database>> {
         {static} String email
         {static} String picturePath
         {static} String password
-        {static} Boolean token
-        {static} Boolean is_registered
+        {static} String token
         {static} Datetime created_at
         {static} Datetime updated_at
     }
