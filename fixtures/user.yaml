@@ -1,0 +1,8 @@
+App\Entity\User:
+  user_{1..100}:
+    customer: '@customer_*'
+    name: '<firstName()> <lastName()>'
+    phoneNumber: <PhoneNumber()>
+    email: <email()>
+    createdAt: <dateTimeThisYear()>
+    updatedAt: <dateTimeThisMonth()>
