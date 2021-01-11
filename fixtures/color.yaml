@@ -1,0 +1,5 @@
+App\Entity\Color:
+  color_{1..20}:
+    name: <word()>
+    createdAt: '<dateTimeThisYear()>'
+    updatedAt: '<dateTimeThisMonth()>'

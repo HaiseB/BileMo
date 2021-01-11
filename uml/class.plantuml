@@ -1,19 +1,18 @@
 @startuml class
 
 package Entity <<Database>> {
-    class Customers {
+    class Clients {
         {static} Auto_increment id
         --
         {static} String name
         {static} String email
         {static} String picturePath
         {static} String password
-        {static} String token
         {static} Datetime created_at
         {static} Datetime updated_at
     }
 
-    Users "0..*" -- "1" Customers
+    Users "0..*" -- "1" Clients
 
     class Users {
         {static} Auto_increment id

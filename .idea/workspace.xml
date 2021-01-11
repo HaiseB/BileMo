@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cba992e-adab-4043-b45a-fadb4f13f727" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fixtures/capacity.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/client.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/color.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/product.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/user.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BileMo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BileMo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -11,9 +15,13 @@
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201224100520.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210110230428.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Customer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/class.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/class.plantuml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/ddcu_cas_d'utilisation.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/ddcu_cas_d'utilisation.plantuml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +137,16 @@
       <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/alice" />
+      <path value="$PROJECT_DIR$/vendor/theofidry/alice-data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/hautelook/alice-bundle" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
     </include_path>
   </component>
   <component name="ProjectId" id="1m4YNlwNkotHdGZTfkAIGriEHyN" />
@@ -142,9 +160,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fixtures" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\BileMo\fixtures" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\BileMo\src\Controller" />
       <recent name="C:\wamp64\www\BileMo" />
@@ -161,6 +183,7 @@
       <workItem from="1608754296789" duration="2395000" />
       <workItem from="1610011177975" duration="8787000" />
       <workItem from="1610316583653" duration="3963000" />
+      <workItem from="1610395463902" duration="2748000" />
     </task>
     <servers />
   </component>
@@ -177,9 +200,10 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="766" y="283" key="NewPhpClassDialog/0.40.1920.1040/-1920.68.1536.824@0.40.1920.1040" timestamp="1610013198396" />
-    <state x="667" y="293" width="585" height="534" key="find.popup" timestamp="1608762085482">
+    <state x="667" y="293" width="585" height="534" key="find.popup" timestamp="1610397404529">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
+    <state x="667" y="293" width="585" height="534" key="find.popup/0.40.1920.1040/-1920.68.1536.824@0.40.1920.1040" timestamp="1610397404529" />
     <state x="667" y="293" width="585" height="534" key="find.popup/0.40.1920.1040/1920.3.1536.824@0.40.1920.1040" timestamp="1608762085482" />
     <state x="623" y="265" key="search.everywhere.popup" timestamp="1610012109948">
       <screen x="0" y="40" width="1920" height="1040" />

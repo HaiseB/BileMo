@@ -45,10 +45,10 @@ class User
     private $updatedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Customer::class, inversedBy="users")
+     * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $customer;
+    private $client;
 
     public function getId(): ?int
     {
@@ -115,14 +115,14 @@ class User
         return $this;
     }
 
-    public function getCustomer(): ?Customer
+    public function getClient(): ?Client
     {
-        return $this->customer;
+        return $this->client;
     }
 
-    public function setCustomer(?Customer $customer): self
+    public function setClient(?Client $client): self
     {
-        $this->customer = $customer;
+        $this->client = $client;
 
         return $this;
     }
