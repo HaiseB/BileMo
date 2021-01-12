@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cba992e-adab-4043-b45a-fadb4f13f727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fixtures/capacity.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/client.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/color.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/product.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/user.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BileMo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BileMo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210110230428.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Customer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/class.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/class.plantuml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/ddcu_cas_d'utilisation.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/ddcu_cas_d'utilisation.plantuml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +166,7 @@
       <workItem from="1610011177975" duration="8787000" />
       <workItem from="1610316583653" duration="3963000" />
       <workItem from="1610395463902" duration="2748000" />
+      <workItem from="1610398587848" duration="706000" />
     </task>
     <servers />
   </component>

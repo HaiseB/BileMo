@@ -8,7 +8,7 @@ security:
         app_user_provider:
             entity :
                 class: App\Entity\Client
-                property: email
+                property: name
         # used to reload user from session & other features (e.g. switch_user)
     firewalls:
         dev:
@@ -21,7 +21,7 @@ security:
             anonymous: true
             json_login:
                 check_path: /api/login_check
-                username_path: email
+                username_path: name
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
         api:
@@ -44,4 +44,4 @@ security:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        # - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
