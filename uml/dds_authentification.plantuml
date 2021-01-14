@@ -1,0 +1,12 @@
+@startuml authentification
+
+actor Client
+boundary Systeme
+database BDD
+
+Client -> Systeme: login() : l'utilisateur soumet ses informations
+Systeme -> BDD: recherche d'un utilisateur correspondant
+BDD --> Systeme : utilisateur trouvé
+Systeme --> Client: Token d'authentification
+
+@enduml

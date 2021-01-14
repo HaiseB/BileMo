@@ -1,6 +1,6 @@
 App\Entity\User:
   user_{1..100}:
-    customer: '@customer_*'
+    client: '@client_*'
     name: '<firstName()> <lastName()>'
     phoneNumber: <PhoneNumber()>
     email: <email()>

@@ -2,22 +2,22 @@
 scale 1
 Left to right direction
 skinparam packageStyle rect
-actor Customers
+actor Clients
 
 rectangle cas_d'utilisation {
-    (Customers) --- (s'authentifier)
-    (Customers) -- (creer un compte)
+    (Clients) --- (s'authentifier)
+    (Clients) -- (creer un compte)
 
     package Users {
-        (Customers) -- (voir la liste de ses utilisateurs)
-        (Customers) -- (voir les details d'un de ses utilisateur)
-        (Customers) -- (creer un utilisateur)
-        (Customers) -- (supprimer un utilisateur)
+        (Clients) -- (voir la liste de ses utilisateurs)
+        (Clients) -- (voir les details d'un de ses utilisateur)
+        (Clients) -- (creer un utilisateur)
+        (Clients) -- (supprimer un utilisateur)
     }
 
     package Products {
-        (Customers) -- (voir la liste des produits)
-        (Customers) -- (voir les détails d'un produit)
+        (Clients) -- (voir la liste des produits)
+        (Clients) -- (voir les détails d'un produit)
     }
 
     Users .> (s'authentifier):include
