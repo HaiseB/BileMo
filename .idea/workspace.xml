@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cba992e-adab-4043-b45a-fadb4f13f727" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fixtures/capacity.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/color.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/customer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/product.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BileMo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BileMo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixtures/client.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/client.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
@@ -194,5 +202,16 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="623" y="265" key="search.everywhere.popup/0.40.1920.1040/-1920.68.1536.824@0.40.1920.1040" timestamp="1610012109948" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Kernel.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
