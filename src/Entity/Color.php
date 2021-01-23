@@ -2,12 +2,33 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ColorRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ApiResource(
+ *  itemOperations={
+ *      "get",
+ *      "delete"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      },
+ *      "put"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      },
+ *      "patch"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      }
+ *  },
+ *  collectionOperations={
+ *      "get",
+ *      "post"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      }
+ *  }
+ * )
  * @ORM\Entity(repositoryClass=ColorRepository::class)
  */
 class Color

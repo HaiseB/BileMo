@@ -6,10 +6,31 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *  itemOperations={
+ *      "get",
+ *      "delete"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      },
+ *      "put"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      },
+ *      "patch"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      }
+ *  },
+ *  collectionOperations={
+ *      "get",
+ *      "post"={
+ *          "access_control"="is_granted('ROLE_ADMIN')"
+ *      }
+ *  }
+ * )
  * @ORM\Entity(repositoryClass=ProductRepository::class)
  */
 class Product
@@ -23,11 +44,13 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=4, minMessage="Le nom doit faire au moins 2 caractères")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=5, minMessage="La référence doit faire au moins 5 caractères")
      */
     private $reference;
 
@@ -78,11 +101,13 @@ class Product
 
     /**
      * @ORM\Column(type="datetime")
+     * @Gedmo\Timestampable(on="create")
      */
     private $createdAt;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Gedmo\Timestampable(on="create")
      */
     private $updatedAt;
 

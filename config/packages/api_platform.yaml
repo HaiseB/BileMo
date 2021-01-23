@@ -5,3 +5,8 @@ api_platform:
         json: ['application/merge-patch+json']
     swagger:
         versions: [3]
+
+    title: 'API de Bilemo'
+    description: 'Depuis cette API vous aurez accès à notre catalogue de produits et vous pourrez aussi stocker vos utilisateurs'
+    version: '1.0.0'
+    show_webby: false
