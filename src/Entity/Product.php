@@ -125,7 +125,7 @@ class Product
 
     /**
      * @ORM\Column(type="datetime")
-     * @Gedmo\Timestampable(on="create")
+     * @Gedmo\Timestampable(on="update")
      */
     private $updatedAt;
 
