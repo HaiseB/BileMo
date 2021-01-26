@@ -6,30 +6,37 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ApiResource(
- *  itemOperations={
- *      "get",
- *      "delete"={
- *          "access_control"="is_granted('ROLE_ADMIN')"
- *      },
- *      "put"={
- *          "access_control"="is_granted('ROLE_ADMIN')"
- *      },
- *      "patch"={
- *          "access_control"="is_granted('ROLE_ADMIN')"
- *      }
- *  },
- *  collectionOperations={
- *      "get",
- *      "post"={
- *          "access_control"="is_granted('ROLE_ADMIN')"
- *      }
- *  }
+ *     attributes={
+ *          "order"={"launchedAt":"DESC"}
+ *     },
+ *     normalizationContext={"groups"={"read:product"}},
+ *     collectionOperations={
+ *          "get",
+ *          "post"={
+ *              "access_control"="is_granted('ROLE_ADMIN')"
+ *          }
+ *     },
+ *    itemOperations={
+ *        "get"={
+ *             "normalization_context"={"groups"={"read:product:detail"}}
+ *         },
+ *        "delete"={
+ *            "access_control"="is_granted('ROLE_ADMIN')"
+ *        },
+ *        "put"={
+ *            "access_control"="is_granted('ROLE_ADMIN')"
+ *        },
+ *        "patch"={
+ *            "access_control"="is_granted('ROLE_ADMIN')"
+ *        }
+ *    }
  * )
  * @ORM\Entity(repositoryClass=ProductRepository::class)
  */
@@ -45,57 +52,68 @@ class Product
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=4, minMessage="Le nom doit faire au moins 2 caractères")
+     * @Groups({"read:product"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=5, minMessage="La référence doit faire au moins 5 caractères")
+     * @Groups({"read:product"})
      */
     private $reference;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"read:product:detail"})
      */
     private $picturePath;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"read:product:detail"})
      */
     private $price;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"read:product:detail"})
      */
     private $display;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"read:product:detail"})
      */
     private $height;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"read:product:detail"})
      */
     private $width;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"read:product:detail"})
      */
     private $depth;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"read:product:detail"})
      */
     private $camera;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"read:product:detail"})
      */
     private $description;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Groups({"read:product:detail"})
      */
     private $launchedAt;
 
@@ -113,11 +131,13 @@ class Product
 
     /**
      * @ORM\ManyToMany(targetEntity=Color::class, inversedBy="products")
+     * @Groups({"read:product:detail"})
      */
     private $colors;
 
     /**
      * @ORM\ManyToMany(targetEntity=Capacity::class, inversedBy="products")
+     * @Groups({"read:product:detail"})
      */
     private $capacitys;
 
