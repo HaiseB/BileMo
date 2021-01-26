@@ -1,0 +1,14 @@
+@startuml lister_les_produits
+
+actor Client
+boundary Systeme
+database BDD
+
+note left of Client: le client doit etre authentifié
+
+Client -> Systeme: afficher la liste de ses utilisateurs (avec le numéro de la page)
+Systeme -> BDD: recherche de 30 utilisateurs appartenant à ce client
+BDD --> Systeme : 30 utilisateurs trouvée
+Systeme --> Client: Json contenant les 30 utilisateurs de la page demandée
+
+@enduml

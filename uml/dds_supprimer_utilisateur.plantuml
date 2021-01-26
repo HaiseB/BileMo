@@ -1,0 +1,14 @@
+@startuml lister_les_produits
+
+actor Client
+boundary Systeme
+database BDD
+
+note left of Client: le client doit etre authentifié
+
+Client -> Systeme: demande de suppression d'un utilisateru rattaché
+Systeme -> BDD: suppression de l'utilisateur
+BDD --> Systeme : suppression reussis
+Systeme --> Client: code 200 : Json avec un body vide
+
+@enduml

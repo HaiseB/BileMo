@@ -1,0 +1,14 @@
+@startuml lister_les_produits
+
+actor Client
+boundary Systeme
+database BDD
+
+note left of Client: le client doit etre authentifié \n et l'utilisateur doit lui appartenir
+
+Client -> Systeme: afficher les details d'un produit
+Systeme -> BDD: recherche du produit
+BDD --> Systeme : produit trouvé
+Systeme --> Client: Json contenant les details du produit demandé
+
+@enduml

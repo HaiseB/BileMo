@@ -1,0 +1,14 @@
+@startuml lister_les_produits
+
+actor Client
+boundary Systeme
+database BDD
+
+note left of Client: le client doit etre authentifié
+
+Client -> Systeme: nouvelles datas d'un utilisateur rattaché
+Systeme -> BDD: modification de l'utilisateur
+BDD --> Systeme : utilisateur modifié
+Systeme --> Client: code 200 : Json contenant les nouveaux details de l'utilisateur
+
+@enduml

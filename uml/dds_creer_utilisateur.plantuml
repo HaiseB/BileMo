@@ -1,0 +1,14 @@
+@startuml lister_les_produits
+
+actor Client
+boundary Systeme
+database BDD
+
+note left of Client: le client doit etre authentifié
+
+Client -> Systeme: création d'un nouvel utilisateur rattaché au client
+Systeme -> BDD: enregistrement de l'utilisateur
+BDD --> Systeme : utilisateur créé
+Systeme --> Client: code 201 : Json contenant l'utilisateur créé
+
+@enduml
