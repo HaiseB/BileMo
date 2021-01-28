@@ -25,7 +25,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *     },
  *    itemOperations={
  *        "get"={
- *             "normalization_context"={"groups"={"read:product:detail"}}
+ *             "normalization_context"={"groups"={"read:product","read:product:detail"}}
  *         },
  *        "delete"={
  *            "access_control"="is_granted('ROLE_ADMIN')"

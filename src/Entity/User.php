@@ -15,16 +15,14 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *     },
  *     normalizationContext={"groups"={"read:user"}},
  *     collectionOperations={
- *          "get"={
- *             "security"="is_granted('ROLE_ADMIN') or object.getClient() == user"
- *         },
+ *          "get"={},
  *          "post"={
  *              "access_control"="is_granted('ROLE_ADMIN')"
  *          }
  *     },
  *    itemOperations={
  *        "get"={
- *             "normalization_context"={"groups"={"read:user:detail"}},
+ *             "normalization_context"={"groups"={"read:user","read:user:detail"}},
  *             "security"="is_granted('ROLE_ADMIN') or object.client == user"
  *         },
  *        "delete"={
