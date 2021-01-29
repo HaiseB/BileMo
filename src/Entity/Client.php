@@ -8,9 +8,13 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      attributes={"security"="is_granted('ROLE_ADMIN')"}
+ * )
  * @ORM\Entity(repositoryClass=ClientRepository::class)
  */
 class Client implements UserInterface
@@ -24,6 +28,7 @@ class Client implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\Length (min=5, minMessage="Le mail doit faire au moins 4 caractères")
      */
     private $email;
 
@@ -40,6 +45,7 @@ class Client implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length (min=3, minMessage="Le nom doit faire au moins 3 caractères")
      */
     private $name;
 
@@ -49,11 +55,13 @@ class Client implements UserInterface
     private $picturePath;
 
     /**
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
 
     /**
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
