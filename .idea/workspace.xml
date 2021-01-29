@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cba992e-adab-4043-b45a-fadb4f13f727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uml/dds_lister_les_produits.plantuml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Api/UserCreateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BileMo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BileMo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixtures/customer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Capacity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Capacity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/dds_authentification.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/dds_authentification.plantuml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +139,7 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1m4YNlwNkotHdGZTfkAIGriEHyN" />
@@ -188,6 +183,7 @@
       <workItem from="1611225857245" duration="4678000" />
       <workItem from="1611325120019" duration="7281000" />
       <workItem from="1611403824755" duration="3246000" />
+      <workItem from="1611923858335" duration="4427000" />
     </task>
     <servers />
   </component>
@@ -200,10 +196,10 @@
     </state>
     <state x="670" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1920.1040/-1920.68.1536.824@0.40.1920.1040" timestamp="1609967947040" />
     <state x="670" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1920.1040/1920.3.1536.824@0.40.1920.1040" timestamp="1608756059560" />
-    <state x="766" y="283" key="NewPhpClassDialog" timestamp="1610013198396">
+    <state x="766" y="283" key="NewPhpClassDialog" timestamp="1611925055892">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="766" y="283" key="NewPhpClassDialog/0.40.1920.1040/-1920.68.1536.824@0.40.1920.1040" timestamp="1610013198396" />
+    <state x="766" y="283" key="NewPhpClassDialog/0.40.1920.1040/-1920.68.1536.824@0.40.1920.1040" timestamp="1611925055892" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1611330071245">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>

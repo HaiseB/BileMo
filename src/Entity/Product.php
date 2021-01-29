@@ -118,14 +118,14 @@ class Product
     private $launchedAt;
 
     /**
+     * @Gedmo\Timestampable (on="create")
      * @ORM\Column(type="datetime")
-     * @Gedmo\Timestampable(on="create")
      */
     private $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
      * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      */
     private $updatedAt;
 
