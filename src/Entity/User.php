@@ -6,6 +6,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
@@ -17,7 +18,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *     collectionOperations={
  *          "get"={},
  *          "post"={
- *              "access_control"="is_granted('ROLE_ADMIN')"
+ *              "controller"=App\Controller\Api\UserCreateController::class
  *          }
  *     },
  *    itemOperations={
@@ -29,10 +30,10 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *            "access_control"="is_granted('ROLE_ADMIN')"
  *        },
  *        "put"={
- *            "access_control"="is_granted('ROLE_ADMIN')"
+ *            "access_control"="is_granted('ROLE_ADMIN') or object.client == user"
  *        },
  *        "patch"={
- *            "access_control"="is_granted('ROLE_ADMIN')"
+ *            "access_control"="is_granted('ROLE_ADMIN') or object.client == user"
  *        }
  *    }
  * )
@@ -50,6 +51,7 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length (min=4, minMessage="Le nom doit faire au moins 4 caractères")
      * @Groups({"read:user"})
      */
     private $name;
@@ -67,15 +69,15 @@ class User
     private $email;
 
     /**
-     * @ORM\Column(type="datetime")
      * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
      * @Groups({"read:user:detail"})
      */
     private $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
      * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
      * @Groups({"read:user:detail"})
      */
     private $updatedAt;
