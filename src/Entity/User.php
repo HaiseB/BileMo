@@ -27,7 +27,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *             "security"="is_granted('ROLE_ADMIN') or object.client == user"
  *         },
  *        "delete"={
- *            "access_control"="is_granted('ROLE_ADMIN')"
+ *            "access_control"="is_granted('ROLE_ADMIN') or object.client == user"
  *        },
  *        "put"={
  *            "access_control"="is_granted('ROLE_ADMIN') or object.client == user"
