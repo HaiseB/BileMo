@@ -30,10 +30,10 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *            "access_control"="is_granted('ROLE_ADMIN')"
  *        },
  *        "put"={
- *            "access_control"="is_granted('ROLE_ADMIN')"
+ *            "access_control"="is_granted('ROLE_ADMIN') or object.client == user"
  *        },
  *        "patch"={
- *            "access_control"="is_granted('ROLE_ADMIN')"
+ *            "access_control"="is_granted('ROLE_ADMIN') or object.client == user"
  *        }
  *    }
  * )
