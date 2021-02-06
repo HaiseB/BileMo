@@ -45,14 +45,14 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"read:user"})
+     * @Groups({"read:user","read:client:detail"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length (min=4, minMessage="Le nom doit faire au moins 4 caractères")
-     * @Groups({"read:user"})
+     * @Groups({"read:user","read:client:detail"})
      */
     private $name;
 

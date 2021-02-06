@@ -8,9 +8,26 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={
+ *          "order"={"name":"ASC"},
+ *          "security"="is_granted('ROLE_ADMIN')"
+ *     },
+ *     normalizationContext={"groups"={"read:client"}},
+ *    itemOperations={
+ *        "get"={
+ *             "normalization_context"={"groups"={"read:client","read:client:detail"}}
+ *         },
+ *        "delete"={},
+ *        "put"={},
+ *        "patch"={}
+ *    }
+ * )
  * @ORM\Entity(repositoryClass=ClientRepository::class)
  */
 class Client implements UserInterface
@@ -19,16 +36,20 @@ class Client implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"read:client"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\Length (min=5, minMessage="Le mail doit faire au moins 4 caractères")
+     * @Groups({"read:client"})
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
+     * @Groups({"read:client:detail"})
      */
     private $roles = [];
 
@@ -39,27 +60,35 @@ class Client implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\Length (min=3, minMessage="Le nom doit faire au moins 3 caractères")
+     * @Groups({"read:client"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"read:client:detail"})
      */
     private $picturePath;
 
     /**
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
+     * @Groups({"read:client:detail"})
      */
     private $createdAt;
 
     /**
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
+     * @Groups({"read:client:detail"})
      */
     private $updatedAt;
 
     /**
      * @ORM\OneToMany(targetEntity=User::class, mappedBy="client", orphanRemoval=true)
+     * @Groups({"read:client:detail"})
      */
     private $users;
 
