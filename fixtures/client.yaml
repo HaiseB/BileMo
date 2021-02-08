@@ -3,6 +3,14 @@ App\Entity\Client:
     email: <email()>
     name: <word()>
     picturePath: <imageUrl(800, 600, 'cats')>
-    password: "$argon2id$v=19$m=65536,t=4,p=1$M2JFZXZFbm5Oa1hnV3lidw$AunH04B20t94bF0XvU5pWzDrvewKX3qMIwNDHGMK4RI"
+    password: \$argon2id\$v=19\$m=65536,t=4,p=1\$M2JFZXZFbm5Oa1hnV3lidw\$AunH04B20t94bF0XvU5pWzDrvewKX3qMIwNDHGMK4RI
+    createdAt: '<dateTimeThisYear()>'
+    updatedAt: '<dateTimeThisMonth()>'
+  client_{6..7}:
+    email: <email()>
+    name: 'admin <word()>'
+    roles: ['ROLE_ADMIN']
+    picturePath: <imageUrl(800, 600, 'cats')>
+    password: \$argon2id\$v=19\$m=65536,t=4,p=1\$M2JFZXZFbm5Oa1hnV3lidw\$AunH04B20t94bF0XvU5pWzDrvewKX3qMIwNDHGMK4RI
     createdAt: '<dateTimeThisYear()>'
     updatedAt: '<dateTimeThisMonth()>'

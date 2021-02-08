@@ -9,5 +9,5 @@ api_swagger_ui:
     defaults: { _controller: api_platform.swagger.action.ui, area: default }
 
 api_login_check:
-    path: /api/login_check
+    path: /api/login
     methods: ['POST']
