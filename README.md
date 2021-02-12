@@ -15,10 +15,11 @@ This project consist of an api for Bilemo customers
 
 ## Pre required
 You will need to install those on your server
-- *PHP* (>= 7.2.10)
-- *Apache* (>= 2.4.35)
-- *MySQL* (>= 5.7.23)
-- *Composer* (>= 1.10.1)
+- *PHP* (>= 7.3)
+- *Apache* (>= 2.4)
+- *MySQL* (>= 5.7)
+- *Composer* (>= 2.0)
+- *OpenSSL*
 
 ## Installation
 
@@ -31,21 +32,37 @@ _Run thoses commands_
 
 ## Settings
 
-- Change all default values in .env
+Change default values in .env as needeed (prefer create a .env.local file)
+- doctrine/doctrine-bundle
+- lexik/jwt-authentication-bundle
 
-- Create a empty database on mysql
+Configuration jwt
+
+- ``mkdir config/jwt``
+
+> for the password choose the same as the .env one
+
+- ``openssl genrsa -out config/jwt/private.pem -aes256 4096``
+- ``openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem``
+
+Create database
 - ``php bin/console doctrine:database:create``
 - ``php bin/console doctrine:migrations:migrate``
-
-(Optional to get fake data)
-- ``php bin/console doctrine:fixtures:load``
+- ``php bin/console hautelook:fixtures:load``
 
 ## How to use
 
-- To launch symfony (choose one, according to your preferences)
+To launch symfony (choose one, according to your preferences)
 
 - ``php -S 127.0.0.1:8000 -t public``
 - ``symfony serve -d``
+
+To connect choose one of the client created
+- Every passwords are initialized at "demodemo"
+
+For the documentation refer to 
+- https://documenter.getpostman.com/view/7061814/TW76CQ9c
+- https://127.0.0.1:8000/api/bm0495/documentation (Api platform generated documentation (swagger v3))
 
 ## Build with
 - [Symfony 5](https://symfony.com/) - PHP framework
